@@ -1,4 +1,2 @@
-<h1>hello and welcome</h1>
-<p>to the page</p>
-
-<%= react_component 'Main' %>
+<div id="movies" data-starting-quote-id='<%= @first_movie_id %>'></div>
+<%= javascript_pack_tag 'movies' %>

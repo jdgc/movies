@@ -9,17 +9,3 @@
 
 console.log('REACT READY')
 
-import React from 'react'
-import { render } from 'react-dom'
-import SampleComponent from '../components/SampleComponent'
-import hello from '../components/hello'
-
-document.addEventListener('DOMContentLoaded', () => {
-  const container = document.body.appendChild(document.createElement('div'));
-  render(<SampleComponent/>, container)
-});
-
-document.querySelector('.btn').addEventListener('onClick', () => {
-  const hello = document.body.appendChild(document.createElement('div'));
-  render
-})
