@@ -17,3 +17,9 @@ Movie.create({
     description: "Number 3",
     rating: 5
   })
+
+Movie.create({
+    title: "Blade Runner 2049",
+    description: "a stinker",
+    rating: 3
+  })
