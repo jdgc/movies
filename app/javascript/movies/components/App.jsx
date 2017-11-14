@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom'
 import MoviesDisplay from './MoviesDisplay'
 
+
 const App = (props) => (
   <Router startingMovieId={props.startingMovieId}>
     <div>

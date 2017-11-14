@@ -9,17 +9,17 @@
 Movie.create({
     title: "Taxi Driver",
     description: "the big boy cleans the streets",
-    rating: 5
+    rating: 0
   })
 
 Movie.create({
     title: "The Third Murder",
     description: "Number 3",
-    rating: 5
+    rating: 0
   })
 
 Movie.create({
     title: "Blade Runner 2049",
     description: "not good",
-    rating: 3
+    rating: 0
   })

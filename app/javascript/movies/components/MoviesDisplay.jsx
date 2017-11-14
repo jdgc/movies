@@ -43,6 +43,45 @@ class MoviesDisplay extends React.Component {
     this.fetchMovie(this.movieId);
   }
 
+  rateGood(id) {
+    axios.patch( `api/movies/${id}`, {
+      'rating': 1
+    })
+        .then(response => {
+          console.log(`${this.state.movie.title}, rated: ${this.state.movie.rating + 1}`);
+          this.fetchMovie(this.state.movie.next_id);
+        })
+        .catch(error => {
+          console.error(error);
+        });
+  }
+
+  rateMaybe(id) {
+    axios.patch( `api/movies/${id}`, {
+      'rating': 2
+    })
+        .then(response => {
+          console.log(`${this.state.movie.title}, rated: ${this.state.movie.rating + 2}`);
+          this.fetchMovie(this.state.movie.next_id);
+        })
+        .catch(error => {
+          console.error(error);
+        });
+  }
+
+  rateBad(id) {
+    axios.patch( `api/movies/${id}`, {
+      'rating': 3
+    })
+        .then(response => {
+          console.log(`${this.state.movie.title}, rated: ${this.state.movie.rating + 3}`);
+          this.fetchMovie(this.state.movie.next_id);
+        })
+        .catch(error => {
+          console.error(error);
+        });
+  }
+
   render () {
     const movie = this.state.movie
     const nextMovieId = movie.next_id
@@ -63,9 +102,9 @@ return (
         <p>{this.state.movie.title}</p>
         <p>{this.state.movie.description}</p>
         <p>{this.state.movie.rating}</p>
-        <button>good</button>
-        <button>maybe</button>
-        <button>bad</button>
+        <button onClick={() => {this.rateGood(this.movieId)}}>good</button>
+        <button onClick={() => {this.rateMaybe(this.movieId)}}>maybe</button>
+        <button onClick={() => {this.rateBad(this.movieId)}}>bad</button>
       </div>
     );
   }
