@@ -63,6 +63,9 @@ return (
         <p>{this.state.movie.title}</p>
         <p>{this.state.movie.description}</p>
         <p>{this.state.movie.rating}</p>
+        <button>good</button>
+        <button>maybe</button>
+        <button>bad</button>
       </div>
     );
   }
